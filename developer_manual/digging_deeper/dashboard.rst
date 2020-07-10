@@ -58,7 +58,7 @@ of the `load` method and will be called when the dashboard is loaded.
 
         /**
          * @return int Initial order for panel sorting
-         *   in the range of 10-100, 0-10 are reserved for shipped apps
+         *   in the range of 10-100, 0-9 are reserved for shipped apps
          * @since 20.0.0
          */
         public function getOrder(): int {
@@ -91,7 +91,7 @@ of the `load` method and will be called when the dashboard is loaded.
     }
 
 
-The class needs to be registered during the app bootstrap.
+The class needs to be registered during the :ref:`app bootstrap<Bootstrapping>`.
 
 .. code-block:: php
 
@@ -151,7 +151,7 @@ however this method is deprecated and will be removed once Nextcloud 19 is EOL.
 Provide a user interface
 ------------------------
 
-The user interface can be registered though the public `OCA.Dashboard.register`
+The user interface can be registered through the public `OCA.Dashboard.register`
 JavaScript method. The first parameter represents the panel id that has already
 been specified in the `IPanel` implementation. The callback parameter will be
 called to render the panel in the frontend. The user interface can be added to
@@ -159,7 +159,7 @@ the provided DOM element `el`.
 
 The following example shows how a Vue.js component could be used to render the
 panel user interface, however this approach works for any other framework as well
-as plain JavaScript as well:
+as plain JavaScript:
 
 
 .. code-block:: javascript
